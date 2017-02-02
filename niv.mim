@@ -1,0 +1,144 @@
+;; niv-kbd.mim -- Nivkh input method based on the Russian keyboard layout
+;; By Jonathan Washington 2017, based on the following:
+;; Copyright (C) 2005
+;;   National Institute of Advanced Industrial Science and Technology (AIST)
+;;   Registration Number H15PRO112
+
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; Input method for Russian by simulating the Russian keyboard.
+;;;
+;;; @image html ru-kbd.png "Keyboard Layout"
+;;; @image latex ru-kbd.eps "Keyboard Layout" width=\narrowwidth
+
+(input-method niv Nivkh)
+
+(description
+ "Nivkh input method based on the Russian keyboard.
+     1!  2\"  3№  4;  5%  6:  7?  8*  9(  0)  -_  =+  ёЁ
+       Й   Ц   У   К   Е   Н   Г   Ш   Щ   З   Х   ◌̡Ъ
+         Ф   Ы   В   А   П   Р   О   Л   Д   Ж   Э \\|
+          Я   Ч   С   М   И   Т  ’◌̵Ь  Б   Ю   .,
+")
+
+(title "Nivkh")
+
+(map
+ (map
+  ("`" ?ё)
+  ("q" ?й)
+  ("w" ?ц)
+  ("e" ?у)
+  ("r" ?к)   ;;("rm" "к’")
+  ("r]" ?ӄ)  ;;("r]m" "ӄ’")
+  ("t" ?е)
+  ("y" ?н)   ("y]" ?ӈ)
+  ("u" ?г)   ("u]" ?ӷ)   ("um" ?ғ)
+  ("u]m" ?ӻ) ("um]" ?ӻ)
+  ("i" ?ш)   ("hi" ?р̌)   ("hii" ?рш)
+  ("o" ?щ)
+  ("p" ?з)
+  ("[" ?х)   ("[]" ?ӽ)   ("[m" ?ӿ)
+;;  ("]" "’")  ("]]" ?ъ)
+  ("]" ?ъ)
+  ("a" ?ф)
+  ("s" ?ы)
+  ("d" ?в)
+  ("f" ?а)
+  ("g" ?п)   ;;("gm" "п’")
+  ("h" ?р)
+  ("j" ?о)
+  ("k" ?л)
+  ("l" ?д)
+  (";" ?ж)
+  ("'" ?э)
+  ("\\" ?\\)
+  ("z" ?я)
+  ("x" "ч")  ;;("xm" "ч’")
+  ("c" ?с)
+  ("v" ?м)
+  ("b" ?и)
+  ("n" ?т)   ;;("nm" "т’")
+  ("m" "’")   ("mm" ?ь)
+  ("," ?б)
+  ("." ?ю)
+  ("/" ?.)
+  ("!" ?!)
+  ("@" ?\")
+  ("#" ?№)
+  ("$" ?\;)
+  ("%" ?%)
+  ("^" ?:)
+  ("&" ??)
+  ("*" ?*)
+  ("(" ?\()
+  (")" ?\))
+  ("_" ?_)
+  ("+" ?+)
+  ("~" ?Ё)
+  ("Q" ?Й)
+  ("W" ?Ц)
+  ("E" ?У)
+  ("R" ?К)   ;;("Rm" "к’")   ("RM" "к’")
+  ("R]" ?Ӄ)  ;;("R]m" "ӄ’")  ("R]M" "ӄ’")
+  ("R}" ?Ӄ)  ;;("R}m" "ӄ’")  ("R}M" "ӄ’")
+  ("T" ?Е)
+  ("Y" ?Н)   ("Y]" ?Ӈ)     ("Y}" ?Ӈ)
+  ("U" ?Г)   ("U]" ?Ӷ)     ("U}" ?Ӷ)
+  ("Um" ?Ғ)  ("UM" ?Ғ)
+  ("U]m" ?Ӻ) ("U}m" ?Ӻ)    ("U]M" ?Ӻ)  ("U}M" ?Ӻ)
+  ("Um]" ?Ӻ) ("UM]" ?Ӻ)    ("UM}" ?Ӻ)  ("Um}" ?Ӻ)
+  ("I" ?Ш)   ("Hi" ?Р̌)     ("HI" ?Р̌)
+  ("HII" ?РШ)("HIi" ?Рш)   ("Hii" ?Рш)
+  ("O" ?Щ)
+  ("P" ?З)
+  ("{" ?Х)   ("{]" ?Ӽ)   ("{}" ?Ӽ)
+  ("{m" ?Ӿ)  ("{M" ?Ӿ)
+  ("}" ?Ъ)
+  ("A" ?Ф)
+  ("S" ?Ы)
+  ("D" ?В)
+  ("F" ?А)
+  ("G" ?П)
+  ("H" ?Р)
+  ("J" ?О)
+  ("K" ?Л)
+  ("L" ?Д)
+  (":" ?Ж)
+  ("\"" ?Э)
+  ("|" ?\|)
+  ("Z" ?Я)
+  ("X" ?Ч)
+  ("C" ?С)
+  ("V" ?М)
+  ("B" ?И)
+  ("N" ?Т)
+  ("M" "’")  ("MM" ?Ь)   ("Mm" ?Ь)
+  ("<" ?Б)
+  (">" ?Ю)
+  ("?" ?,)))
+
+(state
+ (init
+  (map)))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: lisp
+;; End:
