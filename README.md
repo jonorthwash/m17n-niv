@@ -16,3 +16,7 @@ The layout is more or less the same as the standard Russian layout, with a few e
 - typing ‹ь› after ‹г› or ‹х› produces the stroked version
 - typing both ‹ъ› and ‹ь› (order irrelevant) after ‹г› produces the stroked+hooked "ӻ"
 - otherwise ‹ь› produces "’".  Type ‹ь› again for "ь"
+
+## External links
+
+- http://github.com/divvun/ -- Software for making keyboards for a range of platforms
