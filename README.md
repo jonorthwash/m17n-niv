@@ -17,6 +17,8 @@ The layout is more or less the same as the standard Russian layout, with a few e
 - typing both ‹ъ› and ‹ь› (order irrelevant) after ‹г› produces the stroked+hooked "ӻ"
 - otherwise ‹ь› produces "’".  Type ‹ь› again for "ь"
 
+![Nivkh keyboard](nivkh-keyboard.png)
+
 ## External links
 
 - http://github.com/divvun/ -- Software for making keyboards for a range of platforms
